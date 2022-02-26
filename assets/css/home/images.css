@@ -1,0 +1,62 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Images */
+
+picture {
+    width: 100%;
+    height: 100%;
+}
+
+picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images {
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images > .main-image > .pagination {
+    display: none;
+}
+
+.images > .main-image {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    position: relative;
+}
+
+.images > .main-image > picture > img {
+    border-radius: 50px;
+}
+
+.images > .thumbs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images > .thumbs > picture {
+    overflow: hidden;
+    border-radius: 25px;
+    margin: .5rem;
+}
+
+.images > .thumbs > picture > img {
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.images > .thumbs > picture > img:hover {
+    transform: scale(1.1);
+}

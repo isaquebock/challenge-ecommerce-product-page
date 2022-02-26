@@ -41,3 +41,27 @@ const addToCart = document.querySelector('[data-add-to-cart]')
 addToCart.addEventListener('click', () => {
     countCartProducts.innerHTML = quantityValue.value
 })
+
+// Pagination
+
+const bullets = document.querySelectorAll('[data-bullet]')
+
+bullets.forEach((e, i) => {
+    e.addEventListener('click', () => {
+        bullets.forEach(e => {
+            e.classList.remove('-active')
+        })
+
+        e.classList.add('-active')
+
+        mainImage.src = thumbImages[i].src
+    })
+})
+
+const menuMobile = document.querySelector('[data-menu-mobile]')
+const menuMobileContainer = document.querySelector('[data-menu-mobile-container]')
+
+menuMobile.addEventListener('click', () => {
+    menuMobile.classList.toggle('-active');
+    menuMobileContainer.classList.toggle('-active');
+})
